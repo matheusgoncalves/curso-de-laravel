@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+        @extends('layouts.main')
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        @section('title', 'HDC Events')
 
-        <title>Laravel</title>
-
-        <link rel="stylesheet" href="/css/styles.css">
-        <script src="/js/scripts.js"></script>
-    </head>
-
-    <body>
+        @section('content')
+        
         <h1>Algum título</h1>
         <img src="/img/banner.jpg" alt="Banner">
         @if (10 > 5)
@@ -42,11 +34,8 @@
 
         @php
             $name = 'João';
-            echo $name;
+            echo $name
         @endphp
 
         <!-- Comentário do HTML -->
         {{-- Comentário do Blade --}}
-    </body>
-
-</html>
