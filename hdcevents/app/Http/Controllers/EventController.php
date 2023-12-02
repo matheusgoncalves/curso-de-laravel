@@ -21,17 +21,17 @@ class EventController extends Controller
         return view('events.create');
     }
 
-    public function products() {
-        $busca = request('search');
+    public function store(Request $request) {
 
-        return view('products', ['busca' => $busca]);
-    }
+        $event = new Event;
 
-    public function product($id = null) {
-        return view('product', ['id' => $id]);
-    }
+        $event->title = $request->title;
+        $event->city = $request->city;
+        $event->private = $request->private;
+        $event->description = $request->description;
 
-    public function contact() {
-        return view('contact');
+        $event-> save();
+
+        return redirect('/');
     }
 }
